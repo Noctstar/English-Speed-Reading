@@ -1,1 +1,2 @@
-# English-Speed-Reading
+# For those who practice Speed Reading!
+
