@@ -9,7 +9,7 @@ class Content:
         self.count = count
 
     def display_sentence(self):
-        wait_time = 2000 + (output[self.count].count(' '))*150
+        wait_time = 2000 + (output[self.count].count(' '))*200
         buff.set(output[self.count])
         win.after(wait_time, self.display_sentence)
         self.count += 1
@@ -35,7 +35,7 @@ def on_config(event):
 message.bind("<Configure>", on_config)
 
 # ファイルの修正
-file_content = open(file).read()
+file_content = open(file, encoding="utf8", errors='ignore').read()
 output = sent_tokenize(file_content)
 for i in range(len(output)):
     output[i] = output[i].replace('\n', ' ')
