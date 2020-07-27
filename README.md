@@ -24,3 +24,5 @@ pip install nltk
 git clone https://github.com/Noctstar/English-Speed-Reading.git
 python app.py
 ```
+
+<img src="https://user-images.githubusercontent.com/66482927/88546255-11f19a80-d057-11ea-851b-062d16f735d0.gif" width="400">
