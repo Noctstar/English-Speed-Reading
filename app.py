@@ -6,20 +6,18 @@ from nltk.tokenize import sent_tokenize
 
 class Content:
 
-
     def __init__(self, output, count):
         self.output  = output
         self.count = count
-        self.end_flag = False
-
 
     def display_sentence(self):
-        if self.count == len(output):
-            self.end_flag = True
-        wait_time = 2000 + (output[self.count].count(' '))*300
-        buff.set(output[self.count])
-        win.after(wait_time, self.display_sentence)
-        self.count += 1
+        if self.count == len(self.output):
+            win.quit()
+        else:
+            wait_time = 2000 + (output[self.count].count(' '))*300
+            buff.set(output[self.count])
+            win.after(wait_time, self.display_sentence)
+            self.count += 1
 
 
 win = tk.Tk()
@@ -51,8 +49,5 @@ for i in range(len(output)):
 
 content = Content(output, 0)
 content.display_sentence()
-
-if content.end_flag:
-    win.destroy()
 
 win.mainloop()
