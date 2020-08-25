@@ -1,6 +1,7 @@
 # For those who practice Speed Reading!
 
 This program displays sentences at intervals to practice speed reading.
+The text is automatically divided into single sentences through parsing.
 
 ## DEMO
 
