@@ -26,7 +26,6 @@ win.title('Speed Reading')
 win.geometry("1000x300")
 font1 = font.Font(family="メイリオ", size=15)
 
-# テキストファイルの選択
 fTyp = [("","*")]
 iDir = os.path.abspath(os.path.dirname(__file__))
 tk.messagebox.showinfo('Select text file','テキストファイルを選択してください。')
@@ -41,7 +40,6 @@ def on_config(event):
     event.widget.config(width=win.winfo_width())
 message.bind("<Configure>", on_config)
 
-# ファイルの修正
 file_content = open(file, encoding="utf8", errors='ignore').read()
 output = sent_tokenize(file_content)
 for i in range(len(output)):
